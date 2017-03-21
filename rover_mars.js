@@ -119,13 +119,14 @@ function getDirectionLeft() {
         console.log(newDirectionStr + myRover.direction);
         break;
 
-        case "E":
+      case "E":
 
-          myRover.direction = "N";
-          console.log(newDirectionStr + myRover.direction);
-          break;
+        myRover.direction = "N";
+        console.log(newDirectionStr + myRover.direction);
+        break;
     }
   }
+  return myRover.direction;
 }
 
 function getDirectionRight(){
@@ -156,6 +157,7 @@ function getDirectionRight(){
         break;
     }
   }
+  return myRover.direction;
 }
 
 //Make the Rover move depending on the direction and if it is Forwards or Backwards
@@ -177,6 +179,7 @@ function moveForward() {
         break;
     }
   }
+  return myRover.position;
 }
 
 function moveBackward() {
@@ -197,6 +200,7 @@ function moveBackward() {
         break;
     }
   }
+  return myRover.position;
 }
 
 
