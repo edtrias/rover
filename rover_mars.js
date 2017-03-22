@@ -63,12 +63,10 @@ while (count < commandInput.length) {
     finalCommand = commandInput[count];
 
     //Functions to get direction ("N", "E", "S", "W") in here
-    getDirectionLeft();
-    getDirectionRight();
+    getDirection();
 
     //Functions to move the Rover
-    moveForward();
-    moveBackward();
+    moveRover();
 
     //Function to make the planet spherical
     roundPlanet();
@@ -97,7 +95,7 @@ var countInverse = commandInput.length;
 //**************** START OF FUNCTIONS AREA ***********************
 
 //Changing the direction depending on the finalCommand
-function getDirectionLeft() {
+function getDirection() {
 
   if (finalCommand === "l"){
     switch (myRover.direction) {
@@ -126,10 +124,7 @@ function getDirectionLeft() {
         break;
     }
   }
-  return myRover.direction;
-}
 
-function getDirectionRight(){
   if (finalCommand === "r") {
     switch (myRover.direction) {
       case "N":
@@ -157,11 +152,14 @@ function getDirectionRight(){
         break;
     }
   }
+
   return myRover.direction;
 }
 
+
+
 //Make the Rover move depending on the direction and if it is Forwards or Backwards
-function moveForward() {
+function moveRover() {
 
   if (finalCommand === "f") {
     switch(myRover.direction) {
@@ -179,10 +177,6 @@ function moveForward() {
         break;
     }
   }
-  return myRover.position;
-}
-
-function moveBackward() {
 
   if (finalCommand === "b") {
     switch(myRover.direction) {
@@ -200,6 +194,7 @@ function moveBackward() {
         break;
     }
   }
+
   return myRover.position;
 }
 
