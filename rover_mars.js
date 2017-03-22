@@ -63,10 +63,14 @@ while (count < commandInput.length) {
     finalCommand = commandInput[count];
 
     //Functions to get direction ("N", "E", "S", "W") in here
-    getDirection();
+    if (finalCommand === "l" || finalCommand === "r") {
+      getDirection();
+    }
 
     //Functions to move the Rover
-    moveRover();
+    if (finalCommand === "f" || finalCommand === "b") {
+      moveRover();
+    }
 
     //Function to make the planet spherical
     roundPlanet();
